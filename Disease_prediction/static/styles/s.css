@@ -1,0 +1,106 @@
+html {
+    background: url(back_ground.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.note {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #0033cc;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 7px
+}
+
+input {
+    border-radius: 7px;
+    background-color: lightblue;
+    font-family: "butcherman-caps";
+    font-size: 14px;
+    color: blueviolet;
+}
+button {
+    border-radius: 7px;
+    background-color: lightblue;
+    font-family: "butcherman-caps";
+    font-size: 14px;
+    color: blueviolet;
+}
+
+
+p {
+    color: slategrey;
+    font-family: "butcherman-caps";
+    font-size: 18px;
+}
+
+label {
+    color: rebeccapurple;
+}
+
+form {
+    display: block;
+}
+
+.layoutQ {
+    width: 45%;
+    text-align: center;
+    margin-right: 1px;
+    margin-top: 20px;
+    display: none;
+}
+
+.layoutQ:first-child {
+    display: block;
+    justify-content: flex-end;
+}
+
+.dropdown {
+    width: 40%;
+    border: 1px solid #1995ad;
+    border-radius: 8px;
+    padding: 3px;
+    text-align: center;
+    font-size: 15px;
+    margin: 5px 1px;
+    transition: 0.5s;
+    color: rebeccapurple;
+    text-align-last: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.dropdown:hover {
+    background-color: darkgray;
+    color: black;
+    transform: scale(1.07);
+    cursor: pointer;
+    font-family: "butcherman-caps";
+}
+
+.dropdown:focus {
+    background-color: lightgray;
+    color: blue;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background-color: #a1d6e2;
+}
+
+.layoutButton {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.layoutButton .btnSubmit {
+    display: none;
+    padding: 10px 20px;
+}

@@ -1,0 +1,347 @@
+<!---inlayoutq 
+border: 1px solid gray;
+        		border-radius: 7px;-->
+
+<html lang="en" dir="ltr" style="background: url(/static/img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Disease Prediction</title>
+    <link rel="icon" href="static/img/disease.jpg" type="image/x-icon">
+    
+    <link rel="stylesheet" type="text/css" href="static/styles/s.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    
+    <main>
+        <section>
+            <p class="note">Answer the following questions,
+ If you have any of these symptoms, please choose Yes </p>
+
+            <form action="{{ url_for('predict') }}"  method="post">
+                <div class="layoutQ">
+                    <label for="q1">Do you have skin rash?</label><br>
+
+                    <select name="q1" id="q1" class="dropdown">
+                        <option disabled selected>-</option>
+						<option value=1>Yes</option>
+						<option value=0>No</option>
+					</select>
+                </div>
+
+
+                <div class="layoutQ">
+                    <label for="q2">Are you suffering from Nodal Skin Eruptions?</label><br>
+
+                    <select name="q2" id="q2" class="dropdown">  
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+					</select>
+                </div>
+
+
+                <div class="layoutQ">
+                    <label for="q3">Do you feel Chills?</label><br>
+
+                    <select name="q3" id="q3" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q4">Do you feel a lack of energy Fatigue? </label><br>
+
+                    <select name="q4" id="q4" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q5">Do feel a Patche in your Throat? </label><br>
+
+                    <select name="q5" id="q5" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q6"> Are you Sweating alot?</label><br>
+
+                    <select name="q6" id="q6" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q7">Do you feel Dehydrated?</label><br>
+
+                    <select name="q7" id="q7" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q8"> Do you have a Headache? </label><br>
+
+                    <select name="q8" id="q8" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q9">Do you have Loss Of Appetite?</label><br>
+
+                    <select name="q9" id="q9" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q10">Are you suffering from Back Pain? </label><br>
+
+                    <select name="q10" id="q10" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q11">Do you have a Yellowing in your Eyes? </label><br>
+
+                    <select name="q11" id="q11" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q12">Do you have a Chest Pain?</label><br>
+
+                    <select name="q12" id="q12" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q13">Do you have a Pain in Anal Region? </label><br>
+
+                    <select name="q13" id="q13" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q14">Do you suffer from cramps?</label><br>
+
+                    <select name="q14" id="q14" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q15">Do you have an Enlarged Thyroid? </label><br>
+
+                    <select name="q15" id="q15" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q16">Do you have a Knee Pain? </label><br>
+
+                    <select name="q16" id="q16" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q17">Do you have a Muscle Weakness? </label><br>
+
+                    <select name="q17" id="q17" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q18">Do you feel like you are Unsteady when you stand? 
+					</label><br>
+
+                    <select name="q18" id="q18" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q19">Do you have a Muscle Pain? </label><br>
+
+                    <select name="q19" id="q19" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q20">Do you have Altered Sensorium? </label><br>
+
+                    <select name="q20" id="q20" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=2>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q21">Do you have an Increased Appetite?</label><br>
+
+                    <select name="q21" id="q21" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q22"> Do you feel stomach bleeding? </label><br>
+
+                    <select name="q22" id="q22" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+
+                <div class="layoutQ">
+                    <label for="q23">Have you Received an Unsterile Injections lately?  </label><br>
+
+                    <select name="q23" id="q23" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+                <div class="layoutQ">
+                    <label for="q24">Is the disease you predict you have exist in your family history?</label><br>
+
+                    <select name="q24" id="q24" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q25">Do you have Fluid Overload?</label><br>
+
+                    <select name="q25" id="q25" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q26"> Do you have a Pus Filled Pimples? </label><br>
+
+                    <select name="q26" id="q26" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+
+                <div class="layoutQ">
+                    <label for="q27">Do you have Blister?</label><br>
+
+                    <select name="q27" id="q27" class="dropdown">
+                          <option disabled selected>-</option>
+						  <option value=1>Yes</option>
+						  <option value=0>No</option>
+						</select>
+                </div>
+                
+
+                </div>
+                <div class="layoutButton">
+                    <input type="submit" name="btnCalc" class="btnSubmit" padding="50px" value="Show the result" id="q29" method="get">
+                </div>
+            </form>
+        <br>
+        <br>
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+               <script>
+                    var messages = {{ messages | safe }};
+                    var result = {{ result | safe }};
+                    swal(messages+result);
+                          
+             </script>
+            {% endif %}
+          {% endwith %}
+        </section>
+    </main>
+    
+    
+    <script src="static/styles/jquery.js"></script>
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    -->
+    <script>
+        $(document).ready(function() {
+            $(".dropdown").change(function() {
+                var id_parent = $(this).attr("id");
+                if (id_parent == "q27") {
+                    $(".btnSubmit").show(); // to show button
+                }
+                var id_next_question = "#q" + (parseInt(id_parent.split("q")[1]) + 1);
+                $(id_next_question).parent().slideDown("slow", function() {
+                    $("body").scrollTop($("body").scrollTop() + 500);
+                });
+            });
+        });
+    </script>
+    <script >
+        
+    </script>
+</body>
+
+</html>
